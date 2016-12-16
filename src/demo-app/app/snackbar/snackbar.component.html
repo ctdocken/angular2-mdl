@@ -86,13 +86,15 @@ return this.showSnackbar(&#123;
          <pre>
   &#123;message: string;
   timeout?: number;
+  closeAfterTimeout?: boolean,
   action?:&#123;
     handler: () => void;
     text: string;&#125;
 
          </pre>
          <pre>message</pre> The message that should be shown.
-         <pre>timeout</pre> for how long should the message be visible. Defaults to 2750 ms. Is ignored if an action is proivded.
+         <pre>timeout</pre> for how long should the message be visible. Defaults to 2750 ms. Is ignored if an action is provided.
+         <pre>closeAfterTimeout</pre> override timeout's default action; always closes the snackbar after timeout.
          <pre>action</pre> Consists of a handler fuction and an aciton text. The text will be the buttons label. The action is called if the button is clicked.
          <p>
             Returns a Promis with the created <i>MdlSnackbarComponent</i>. You can use this instance to
